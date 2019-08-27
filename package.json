@@ -1,0 +1,30 @@
+{
+  "name": "use-logged-reducer",
+  "version": "1.0.2",
+  "types": "./dist/index.d.ts",
+  "description": "A useReducer React hook wrapper for logging flux data",
+  "keywords": [
+    "React",
+    "Hooks",
+    "useReducer",
+    "Logging"
+  ],
+  "main": "dist/main.js",
+  "dependencies": {
+    "@types/react": "^16.9.0",
+    "@types/redux-logger": "^3.0.7",
+    "react": "16.8.6",
+    "redux-logger": "3.0.6"
+  },
+  "devDependencies": {
+    "ts-loader": "^6.0.4",
+    "typescript": "^3.5.3",
+    "webpack": "^4.39.1",
+    "webpack-cli": "^3.3.6"
+  },
+  "scripts": {
+    "build": "webpack"
+  },
+  "author": "Brooks Becton",
+  "license": "MIT"
+}
