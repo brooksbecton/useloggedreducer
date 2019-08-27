@@ -1,22 +1,24 @@
-const path = require('path');
+const path = require("path");
 
 module.exports = {
-  entry: ['./src/useLoggedReducer.ts'],
-  mode: 'production',
+  entry: ["./src/useLoggedReducer.ts"],
+  externals : "react",
+  mode: "development",
   module: {
     rules: [
       {
         test: /\.tsx?$/,
-        use: 'ts-loader',
-        exclude: /node_modules/
-      }
-    ]
+        use: "ts-loader",
+        exclude: /node_modules/,
+      },
+    ],
   },
   resolve: {
-    extensions: [ '.tsx', '.ts', '.js' ]
+    extensions: [".tsx", ".ts", ".js"],
   },
   output: {
-    filename: 'main.js',
-    path: path.resolve(__dirname, 'dist')
-  }
+    filename: "useloggedreducer.js",
+    path: path.resolve(__dirname, "dist"),
+    libraryTarget: "umd",
+  },
 };

@@ -1,7 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { useLoggedReducer } from "./../../../dist/main";
-console.log(useLoggedReducer)
+
+import { useLoggedReducer } from "../../../dist/useloggedreducer";
+console.log(useLoggedReducer);
 const initialState = { count: 0 };
 
 function reducer(state, action) {
@@ -19,21 +20,28 @@ function reducer(state, action) {
   }
 }
 
-function App() {
+const Counter = () => {
   const [state, dispatch] = useLoggedReducer(reducer, initialState);
   return (
-    <>
-      Count:{" "}
-      <input
-        type="number"
-        value={state.count}
-        onChange={e => dispatch({ type: "set", count: +e.target.value })}
-      />
-      <button onClick={() => dispatch({ type: "reset" })}>Reset</button>
-      <button onClick={() => dispatch({ type: "increment" })}>+</button>
-      <button onClick={() => dispatch({ type: "decrement" })}>-</button>
-    </>
+    <div>
+      <div>
+        Count:{" "}
+        <input
+          type="number"
+          value={state.count}
+          onChange={e => dispatch({ type: "set", count: +e.target.value })}
+        />
+        <button onClick={() => dispatch({ type: "reset" })}>Reset</button>
+        <button onClick={() => dispatch({ type: "increment" })}>+</button>
+        <button onClick={() => dispatch({ type: "decrement" })}>-</button>
+      </div>
+      <p>Open the console to see the logger</p>
+    </div>
   );
+};
+
+function App() {
+  return <Counter />;
 }
 
 const rootElement = document.getElementById("root");
