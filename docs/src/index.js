@@ -1,8 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-import { useLoggedReducer } from "../../../dist/useloggedreducer";
-console.log(useLoggedReducer);
+import { useLoggedReducer } from "./../../dist/useloggedreducer";
+
 const initialState = { count: 0 };
 
 function reducer(state, action) {
