@@ -1,8 +1,9 @@
 {
   "name": "useloggedreducer",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "types": "./dist/index.d.ts",
   "description": "A useReducer React hook wrapper for logging flux data",
+  "repository": "brooksbecton/useloggedreducer",
   "keywords": [
     "React",
     "Hooks",
